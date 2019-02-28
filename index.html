@@ -1,0 +1,46 @@
+<head>
+  <link rel='stylesheet' href='drag.css'>
+
+<style>
+.grid {
+  width: 100px;
+  height: 100px;
+  border: 2px dashed #efefef;
+  position: absolute;
+  background-color: white !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  z-index: -1;
+}
+</style>
+</head>
+
+<div style='padding: 50px 100px;' id='container'>
+
+  <!-- the div position is draggable across entire page -->
+  <div id='draggable-div'>A<br><span>Drag Me</span></div>
+
+  <!-- the div's borders are draggable -->
+  <div id='draggable-border'>B<br><span>Drag Borders</span></div>
+
+  <!-- the div position is draggable but fixed to a grid -->
+  <div id='drag-on-grid'>C<br><span>Drag Me</span></div>
+
+</div><!-- container -->
+
+<script>
+for (var x = 0; x <= 9; x++) {
+  for (var y = 0; y <= 4; y++) {
+    document.getElementById('container').innerHTML =
+      document.getElementById('container').innerHTML +
+        "<div class='grid' id='" + (x * 10 + y) + "'></div>";
+    var g = document.getElementById(x * 10 + y);
+    g.style.left = 100 + x * 100 + 'px';
+    g.style.top = 100 + y * 100 + 'px';
+  }
+}
+</script>
+
+<script src='draggable-div.js'></script>
+<script src='draggable-border.js'></script>
+<script src='drag-on-grid.js'></script>

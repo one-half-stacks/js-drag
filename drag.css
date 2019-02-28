@@ -1,0 +1,34 @@
+div div {
+  width: 60px;
+  height: 60px;
+  border: 5px solid black;
+  background-color: #eee;
+  font-size: 200%;
+  font-family: sans-serif;
+  padding: 20px;
+  text-align: center;
+}
+
+div div span {
+  font-size: 60%;
+}
+
+#draggable-div {
+  position: absolute; /* necessary */
+  top: 200px;
+  left: 300px;
+  cursor: move;
+}
+
+#draggable-border {
+  position: absolute;
+  top: 200px;
+  left: 500px;
+}
+
+#drag-on-grid {
+  position: absolute; /* necessary */
+  top: 200px;
+  left: 700px;
+  cursor: move;
+}
